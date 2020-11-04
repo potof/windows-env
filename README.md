@@ -17,6 +17,29 @@ Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advan
 
 ```
 
+## WSL 2 を有効にする
+管理者権限で実行する。
+
+```powershell
+# Linux 用 Windows サブシステム
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+
+# 仮想マシン プラットフォーム
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
+PC Restart
+
+```powershell
+# WSL 2 Kernel Update
+Invoke-WebRequest -Uri https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi -OutFile wsl_update_x64.msi -UseBasicParsing
+msiexec /i wsl_update_x64.msi /passive /norestart 
+rm wsl_update_x64.msi
+
+# WSL 2 を標準にする
+wsl --set-default-version 2
+```
+
 # Application
 ## 手動でインストールする
 - boostnote
