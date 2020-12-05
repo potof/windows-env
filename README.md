@@ -49,6 +49,7 @@ wsl --set-default-version 2
 - Happy Hacking Keyboardキーマップ変更ツール
 - League Display
 - VoiceMeeter BANANA
+- Philips hue Sync
 
 ## Microsoft Store からインストールする
 - Windows Terminal
