@@ -11,7 +11,7 @@ Set-ItemProperty -Path ‘HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Polici
 
 ## フォルダオプション(拡張子を表示する)
 Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -name "HideFileExt" -Value 0
-   
+
 ## フォルダオプション(隠しファイル、隠しフォルダ、隠しドライブを表示する)
 Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -name "Hidden" -Value 1
 
@@ -33,7 +33,7 @@ PC Restart
 ```powershell
 # WSL 2 Kernel Update
 Invoke-WebRequest -Uri https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi -OutFile wsl_update_x64.msi -UseBasicParsing
-msiexec /i wsl_update_x64.msi /passive /norestart 
+msiexec /i wsl_update_x64.msi /passive /norestart
 rm wsl_update_x64.msi
 
 # WSL 2 を標準にする
@@ -50,6 +50,7 @@ wsl --set-default-version 2
 - League Display
 - VoiceMeeter BANANA
 - Philips hue Sync
+- Flash Print
 
 ## Microsoft Store からインストールする
 - Windows Terminal
