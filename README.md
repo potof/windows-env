@@ -48,7 +48,7 @@ wsl --set-default-version 2
 - Logicool G HUB
 - Happy Hacking Keyboardキーマップ変更ツール
 - League Display
-- VoiceMeeter BANANA
+- VoiceMeeter Potato
 - Philips hue Sync
 - Flash Print
 
@@ -69,3 +69,6 @@ choco pin add -n=googlechrome
 - Dark Theme for Google
 - Video Speed Controller
 - Chrome Remote Desktop
+- One Tab
+- 1 Password
+- Notion Web Clipper
