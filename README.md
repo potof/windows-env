@@ -16,6 +16,12 @@ Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advan
 Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -name "Hidden" -Value 1
 
 ```
+## Dos Profile
+Windows コマンドプロンプトのデフォルトプロファイルを設定する。
+
+```bat
+reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor" /v AutoRun /d "@ECHO OFF & IF EXIST \"%HOMEDRIVE%%HOMEPATH%\dosprofile.cmd\" \"%HOMEDRIVE%%HOMEPATH%\dosprofile.cmd\" & ECHO ON"
+```
 
 ## WSL 2 を有効にする
 管理者権限で実行する。
